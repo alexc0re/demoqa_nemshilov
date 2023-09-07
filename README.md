@@ -24,5 +24,5 @@
 #### Test api flow:
 
   ```
-  pytest -k test_api_flow
+  pytest -k api_flow
   ```
