@@ -12,6 +12,12 @@
   ```
   pip install -r requirements.txt
   ```
+* Add env variables
+  ```
+  export BOOK_LOGIN=alexnemsh
+  export BOOK_PASSWORD=6e8h4VSn4v#Z%bd
+  ```
+
 * *Run all tests for login page*
 
   ```
