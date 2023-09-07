@@ -34,6 +34,6 @@ class DemoQaApi:
         try:
             self.log.info(f'Response = {response.status_code} {response.json()}')
         except requests.exceptions.JSONDecodeError:
-            self.log.info(f'Response = {response.status_code}, {response.content}')
+            self.log.info(f'Response = {response.status_code}, {response.text}')
             pass
         return response

@@ -6,7 +6,7 @@ import os
 
 
 
-class DemoQa:
+class DemoQa():
     log = log_method()
 
     def __init__(self, browser: Browser, url='https://demoqa.com'):
