@@ -2,12 +2,10 @@
 
 ## Quick start:
 
-* clone [this](https://git.tmlab.io/qa/autotest) repo to your local drive
+* clone [this](https://github.com/alexc0re/demoqa_nemshilov.git) repo to your local drive
 
   ```
-  git clone git@git.tmlab.io:qa/autotest.git 
-  cd autotest
-  git switch -c main
+  git clone https://github.com/alexc0re/demoqa_nemshilov.git
   ```
 * install dependencies
 
@@ -19,8 +17,9 @@
   ```
     pytest -k test_login
   ```
-* **Test single registration internal  offer:**
+* **Test api flow:**
+
 
   ```
-  pytest -k test_registration_internal_offer
+  pytest -k test_api_flow
  

@@ -14,6 +14,7 @@ class DemoQa:
         self.browser = browser
         self.context = self.browser.new_context()
         self.page = self.context.new_page()
+        self.page.set_default_navigation_timeout(20000)
 
     def open_demoqa(self):
         self.page.goto(self.base_url)
