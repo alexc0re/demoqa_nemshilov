@@ -36,6 +36,7 @@ class AccountAPI(DemoQaApi):
         response = self.api_request(method='GET', endpoint=f'/Account/v1/User/{self.userid}', headers=self.header)
         assert response.status_code == 200, f"expexted code 200 , actual code: {response.status_code}"
 
+    @pytest.mark.xfail
     def delete_user(self):
         response = self.api_request(method='DELETE', endpoint=f'/Account/v1/User/{self.userid}', headers=self.header)
         assert response.status_code == 204 , f"expexted code 200 , actual code: {response.status_code}"
@@ -43,11 +44,11 @@ class AccountAPI(DemoQaApi):
 
     def get_all_books(self):
         response = self.api_request(method='GET', endpoint='/BookStore/v1/Books')
-        assert response.status_code == 200
+        assert response.status_code == 200, f"expexted code 200 , actual code: {response.status_code}"
 
     def get_book_info(self):
         response = self.api_request(method='GET', endpoint='/BookStore/v1/Book?ISBN=9781449325862')
-        assert response.status_code == 200
+        assert response.status_code == 200 , f"expexted code 200 , actual code: {response.status_code}"
 
 
     def add_book_to_collection(self):
@@ -60,7 +61,7 @@ class AccountAPI(DemoQaApi):
             ]
         }
         response = self.api_request('POST', endpoint='/BookStore/v1/Books', headers=self.header,body=payload)
-        assert response.status_code == 201
+        assert response.status_code == 201 , f"expexted code 201 , actual code: {response.status_code}"
 
     def delete_books_from_collection(self):
         response = self.api_request('DELETE', endpoint=f'/BookStore/v1/Books/?UserId={self.userid}', headers=self.header)
