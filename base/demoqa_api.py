@@ -1,17 +1,12 @@
 import json
 import logging as log
-from pathlib import Path
-
 import requests
-from requests import utils
 from support.generator import generate_name
-
-from support.headers import header
 from support.logger import log_method
 
 
 
-
+header = {'Content-Type': 'application/json','Accept': 'application/json',}
 
 class DemoQaApi:
     log = log_method(logLevel=log.INFO)
@@ -24,7 +19,7 @@ class DemoQaApi:
         self.base_url = base_url
         self.header = {'Content-Type': 'application/json','Accept': 'application/json',}
 
-        pass
+
 
     def api_request(self, method, endpoint, body='', headers=header):
         url = self.base_url + endpoint
