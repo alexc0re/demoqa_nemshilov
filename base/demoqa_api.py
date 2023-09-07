@@ -4,6 +4,7 @@ from pathlib import Path
 
 import requests
 from requests import utils
+from support.generator import generate_name
 
 from support.headers import header
 from support.logger import log_method
@@ -16,7 +17,13 @@ class DemoQaApi:
     log = log_method(logLevel=log.INFO)
 
     def __init__(self, base_url='https://demoqa.com'):
+        self.name = generate_name()
+        self.userid = str
+        self.token = str
+        self.body = {"userName": self.name, "password": "6e8h4VSn4v#Z%bd"}
         self.base_url = base_url
+        self.header = {'Content-Type': 'application/json','Accept': 'application/json',}
+
         pass
 
     def api_request(self, method, endpoint, body='', headers=header):
