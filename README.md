@@ -12,21 +12,16 @@
   ```
   pip install -r requirements.txt
   ```
-* Add env variables
+#### Create .env file with valid creds
+- allready done 
 
 
-
-
-
-
-
-
-* *Run all tests for login page*
+#### *Run all tests for login page*
 
   ```
     pytest -k test_login
   ```
-* *Test api flow:*
+#### Test api flow:
 
   ```
   pytest -k test_api_flow
