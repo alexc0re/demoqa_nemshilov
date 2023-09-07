@@ -51,6 +51,6 @@ def api():
     return DemoQaApi()
 
 
-@fixture(scope='function')
+@fixture(scope='session')
 def account():
     return AccountAPI()

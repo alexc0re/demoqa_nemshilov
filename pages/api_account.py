@@ -36,10 +36,9 @@ class AccountAPI(DemoQaApi):
         response = self.api_request(method='GET', endpoint=f'/Account/v1/User/{self.userid}', headers=self.header)
         assert response.status_code == 200, f"expexted code 200 , actual code: {response.status_code}"
 
-    @pytest.mark.xfail
     def delete_user(self):
         response = self.api_request(method='DELETE', endpoint=f'/Account/v1/User/{self.userid}', headers=self.header)
-        assert response.status_code == 204 , f"expexted code 200 , actual code: {response.status_code}"
+        assert response.status_code == 200 , f"expexted code 200 , actual code: {response.status_code}"
 
 
     def get_all_books(self):
