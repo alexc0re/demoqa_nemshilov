@@ -1,5 +1,7 @@
 import time
 
+from env_setup import *
+
 from playwright.sync_api import expect
 
 from base.demoqa_base import DemoQa
@@ -16,7 +18,7 @@ class BookStore_app(DemoQa):
         self.page.get_by_text('Profile').click()
         expect(self.page.locator('.main-header')).to_contain_text('Profile')
 
-    def login_book_store_app(self, login: str = os.environ['BOOK_LOGIN'], password: str = os.environ['BOOK_PASSWORD']):
+    def login_book_store_app(self, login: str = os.getenv('BOOK_LOGIN'), password: str = os.getenv('BOOK_PASSWORD')):
         self.open_demoqa()
         self.navigate_to_book_store_app()
         self.page.locator('#login').click()
