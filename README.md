@@ -7,11 +7,20 @@
   ```
   git clone https://github.com/alexc0re/demoqa_nemshilov.git
   ```
+* Navigate to project folder 
+  ```
+  cd demoqa_nemshilov
+  ```
 * install dependencies
 
   ```
   pip install -r requirements.txt
   ```
+* install playwright browser
+  ```
+  playwright install
+  ```
+
 #### Create .env file with valid creds
 - allready done 
 
