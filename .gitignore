@@ -2,3 +2,4 @@ idea
 __pytest_cache__
 .idea
 logfile.log
+__pycache__/
